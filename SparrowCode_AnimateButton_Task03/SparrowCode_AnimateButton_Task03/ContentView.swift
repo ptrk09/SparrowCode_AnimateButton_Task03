@@ -22,7 +22,6 @@ extension ContentView {
         } label: {
             ButtonContent()
         }
-        .buttonStyle(ButtonAccentColorStyle())
     }
 
     @ViewBuilder
@@ -58,14 +57,6 @@ private class AnimationFactory {
         .linear(duration: 0.01)
     }
 }
-
-private struct ButtonAccentColorStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundColor(.accentColor)
-    }
-}
-
 
 #Preview {
     ContentView()
